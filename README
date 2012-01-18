@@ -24,3 +24,83 @@ git checkout 94f77f7
 
 6. a branchen legye 2 kommit
 7. mergelj vissza a masterre
+
+challenge accepted, mert az első sorba most beleírtam. I am lovin' it!
+
+MEGOLDÁSOK:
+
+IV.
+1. az egyik már dina sandboxos fájl adott sorában változtass valamit
+	git clone URL LOKÁLDIR
+	README szerkesztése
+
+2. kérj meg valakit hogy ugyanott változtasson
+	ZSOLT is beleírt
+
+3. akit megkértél commitolja be és küldje fel
+	Megtette
+
+4. frissits
+	~/Desktop/sandbox[master]$ git pull origin
+	remote: Counting objects: 5, done.
+	remote: Total 3 (delta 0), reused 3 (delta 0)
+	Unpacking objects: 100% (3/3), done.
+	From github.com:digitalnatives/sandbox
+	   d3bc211..eab9c8e  master     -> origin/master
+	Updating d3bc211..eab9c8e
+	error: Your local changes to the following files would be overwritten by merge:
+		README
+	Please, commit your changes or stash them before you can merge.
+	Aborting
+
+5. old meg a merge conflictot
+	Stash és pull használatával
+
+	~/Desktop/sandbox[master]$ git stash 
+	Saved working directory and index state WIP on master: d3bc211 first commit
+	HEAD is now at d3bc211 first commit
+	~/Desktop/sandbox[master]$ git status
+	# On branch master
+	# Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+	#
+	nothing to commit (working directory clean)
+
+	~/Desktop/sandbox[master]$ git stash list
+	stash@{0}: WIP on master: d3bc211 first commit
+
+	~/Desktop/sandbox[master]$ git pull origin master
+	remote: Counting objects: 21, done.
+	remote: Compressing objects: 100% (9/9), done.
+	remote: Total 19 (delta 5), reused 19 (delta 5)
+	Unpacking objects: 100% (19/19), done.
+	From github.com:digitalnatives/sandbox
+	 * branch            master     -> FETCH_HEAD
+	Updating d3bc211..ad7aa6e
+	Fast-forward
+	 README    |    1 +
+	 test_file |    2 ++
+	 valami    |    1 +
+	 xy        |    4 ++++
+	 4 files changed, 8 insertions(+), 0 deletions(-)
+	 create mode 100644 test_file
+	 create mode 100644 valami
+	 create mode 100644 xy
+	~/Desktop/sandbox[master]$ git stash pop
+	Auto-merging README
+	CONFLICT (content): Merge conflict in README
+
+	~/Desktop/sandbox[master]$ mcedit README 
+
+	~/Desktop/sandbox[master]$ git add .
+	~/Desktop/sandbox[master]$ git commit -m"Merged conflict"
+	[master 4f32715] Merged conflict
+	 1 files changed, 1 insertions(+), 1 deletions(-)
+
+	Counting objects: 5, done.
+	Delta compression using up to 4 threads.
+	Compressing objects: 100% (3/3), done.
+	Writing objects: 100% (3/3), 412 bytes, done.
+	Total 3 (delta 0), reused 0 (delta 0)
+	To git@github.com:digitalnatives/sandbox.git
+	   ad7aa6e..4f32715  master -> master
+
