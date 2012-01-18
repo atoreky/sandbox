@@ -14,7 +14,13 @@ git reset --hard 765237a
 
 4. csinálj egy következőt
 
+git commit -am "fifth commit"
 
 5. vedd ki a 2. commitot és branchelj onnan
+
+git log --graph --oneline
+git checkout 94f77f7 
+
+
 6. a branchen legye 2 kommit
 7. mergelj vissza a masterre
