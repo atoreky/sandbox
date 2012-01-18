@@ -5,9 +5,16 @@ git commit -am "second commit"
 
 2. nézd meg a különbséget az egyes commitok között command line-ban
 
+git log --graph --oneline
+git diff 6e0a6e3..d3bc211 -- color
 
 3. vond vissza a legutolsó 3-t
+
+git reset --hard 765237a
+
 4. csinálj egy következőt
+
+
 5. vedd ki a 2. commitot és branchelj onnan
 6. a branchen legye 2 kommit
 7. mergelj vissza a masterre
