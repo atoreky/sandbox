@@ -3,8 +3,9 @@
 git commit -a -m "first commit"
 git commit -am "second commit"
 
-
 2. nézd meg a különbséget az egyes commitok között command line-ban
+
+
 3. vond vissza a legutolsó 3-t
 4. csinálj egy következőt
 5. vedd ki a 2. commitot és branchelj onnan
