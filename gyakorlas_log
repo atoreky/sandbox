@@ -1,0 +1,41 @@
+I.
+1. forkolj a sandboxból
+2. csinálj egy saját local branchet
+3. csinálj itt 3 commitot
+4. menj vissza a masterre
+5. csinálj 1 commitot
+6. tedd fel a valtoztatást a fork repositorydba
+7. kerüljön bele ez a dina sandboxba
+8. fejezd be a local branchen amit elkezdtél
+9. kerüljön be ez is a dina sandboxba
+
+II.
+1. a helyi repository-dban csinálj 5 commitot
+2. nézd meg a különbséget az egyes commitok között command line-ban
+3. vond vissza a legutolsó 3-t
+4. csinálj egy következőt
+5. vedd ki a 2. commitot és branchelj onnan
+6. a branchen legye 2 kommit
+7. mergelj vissza a masterre
+
+
+III.
+1. clone-ozd le a sandboxot
+2. csinálj egy helyi branchet
+3. itt legyen 2 commit
+4. kerüljön fel ez a branch a dina sandboxba
+5. a változtatás kerüljön bele a dina sandbox masterbe
+
+
+IV.
+1. az egyik már dina sandboxos fájl adott sorában változtass valamit
+2. kérj meg valakit hogy ugyanott változtasson
+3. akit megkértél commitolja be és küldje fel
+4. frissits
+  zsolt: git fetch
+  zsolt: git merge origin/master
+5. old meg a merge conflictot
+
+
+kis extra:
+  zsolt (mast hozzaadni): git remote add miki-fork git@github.com:whatwho/sandbox.git
